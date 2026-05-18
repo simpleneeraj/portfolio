@@ -1,15 +1,7 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { profile } from "@/portfolio.config";
+import './globals.css';
+import { metadata as portfolioMetadata } from '@/portfolio.config';
 
-export const metadata: Metadata = {
-  title: profile.name,
-  description: profile.bio,
-  openGraph: {
-    title: profile.name,
-    description: profile.bio,
-  },
-};
+export const metadata = portfolioMetadata;
 
 export default function RootLayout({
   children,

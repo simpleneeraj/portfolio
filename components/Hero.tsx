@@ -1,9 +1,8 @@
-import { profile, socials } from "@/portfolio.config";
-import { SocialIcon } from "./SocialIcon";
-import Image from "next/image";
+import Image from 'next/image';
+import { profile, socials } from '@/portfolio.config';
 
 export function Hero() {
-  const firstName = profile.name.replace(profile.nameItalic, "").trim();
+  const firstName = profile.name.replace(profile.nameItalic, '').trim();
 
   return (
     <div className="stagger border-b border-black/10 pb-10 mb-12">
@@ -12,7 +11,7 @@ export function Hero() {
         <div className="flex-1">
           <h1 className="font-serif text-[clamp(40px,9vw,64px)] leading-[0.95] tracking-[-0.02em] text-ink font-normal">
             {firstName && <span>{firstName} </span>}
-            <em className="not-italic text-accent italic">{profile.nameItalic}</em>
+            <em className="not-italic text-accent">{profile.nameItalic}</em>
           </h1>
 
           <p className="mt-1 text-sm font-medium text-ink-3 tracking-wider uppercase">
@@ -57,11 +56,11 @@ export function Hero() {
           <a
             key={s.label}
             href={s.href}
-            target={s.href.startsWith("mailto") ? undefined : "_blank"}
+            target={s.href.startsWith('mailto') ? undefined : '_blank'}
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-[13px] font-medium text-ink-2 bg-white border border-black/10 rounded-full px-3.5 py-1.5 transition-all duration-200 hover:border-ink hover:text-ink hover:bg-surface-2"
           >
-            <SocialIcon icon={s.icon} />
+            <s.icon className="w-3.5 h-3.5" />
             {s.label}
           </a>
         ))}

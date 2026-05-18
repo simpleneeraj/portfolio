@@ -58,8 +58,8 @@ layer(base);
 }
 
 :root {
-  --font-instrument: "Instrument Serif", Georgia, serif;
-  --font-dm-sans: "DM Sans", system-ui, sans-serif;
+  --font-instrument: 'Instrument Serif', Georgia, serif;
+  --font-dm-sans: 'DM Sans', system-ui, sans-serif;
 }
 
 html {
@@ -75,7 +75,7 @@ body {
 
 /* Grain overlay */
 body::before {
-  content: "";
+  content: '';
   position: fixed;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
@@ -88,25 +88,49 @@ body::before {
   opacity: 0;
   animation: fadeUp 0.55s ease forwards;
 }
-.stagger > *:nth-child(1) { animation-delay: 0.05s; }
-.stagger > *:nth-child(2) { animation-delay: 0.13s; }
-.stagger > *:nth-child(3) { animation-delay: 0.21s; }
-.stagger > *:nth-child(4) { animation-delay: 0.29s; }
-.stagger > *:nth-child(5) { animation-delay: 0.37s; }
-.stagger > *:nth-child(6) { animation-delay: 0.45s; }
-.stagger > *:nth-child(7) { animation-delay: 0.53s; }
-.stagger > *:nth-child(8) { animation-delay: 0.61s; }
+.stagger > *:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.stagger > *:nth-child(2) {
+  animation-delay: 0.13s;
+}
+.stagger > *:nth-child(3) {
+  animation-delay: 0.21s;
+}
+.stagger > *:nth-child(4) {
+  animation-delay: 0.29s;
+}
+.stagger > *:nth-child(5) {
+  animation-delay: 0.37s;
+}
+.stagger > *:nth-child(6) {
+  animation-delay: 0.45s;
+}
+.stagger > *:nth-child(7) {
+  animation-delay: 0.53s;
+}
+.stagger > *:nth-child(8) {
+  animation-delay: 0.61s;
+}
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Project card top-bar reveal */
 .project-bar::before {
-  content: "";
+  content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 2px;
   background: #c8522a;
   transform: scaleX(0);
@@ -115,4 +139,13 @@ body::before {
 }
 .project-bar:hover::before {
   transform: scaleX(1);
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(320%);
+  }
 }

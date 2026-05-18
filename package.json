@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@iconify-react/iconamoon": "^1.0.2",
+    "@iconify-react/logos": "^1.0.3",
     "next": "15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

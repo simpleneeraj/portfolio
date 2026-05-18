@@ -1,4 +1,4 @@
-import { Project } from "@/portfolio.config";
+import { Project } from '@/app/types';
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -8,6 +8,8 @@ export function ProjectCard({ project }: { project: Project }) {
       rel="noopener noreferrer"
       className="project-bar group relative flex flex-col gap-2.5 bg-white border border-black/10 rounded-2xl p-5 overflow-hidden transition-all duration-200 hover:translate-y-[-3px] hover:border-accent/30 hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
     >
+      {/* Animated glow */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_top_right,rgba(255,180,80,0.12),transparent_40%)]" />
       {/* Tag + Year */}
       <div className="flex items-center justify-between">
         <span className="text-[10px] font-medium tracking-[0.08em] uppercase text-accent bg-accent/8 px-2 py-0.5 rounded-sm">

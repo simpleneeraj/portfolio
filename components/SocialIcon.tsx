@@ -1,4 +1,4 @@
-import { SocialIcon as SocialIconType } from "@/portfolio.config";
+import { SocialIcon as SocialIconType } from '@/app/types';
 
 const paths: Record<SocialIconType, React.ReactNode> = {
   github: (
@@ -18,16 +18,16 @@ const paths: Record<SocialIconType, React.ReactNode> = {
   ),
 };
 
-const isFilled = (icon: SocialIconType) => icon !== "email";
+const isFilled = (icon: SocialIconType) => icon !== 'email';
 
 export function SocialIcon({ icon }: { icon: SocialIconType }) {
   return (
     <svg
       viewBox="0 0 24 24"
       className="w-[14px] h-[14px] shrink-0"
-      fill={isFilled(icon) ? "currentColor" : "none"}
-      stroke={isFilled(icon) ? "none" : "currentColor"}
-      strokeWidth={isFilled(icon) ? undefined : "2"}
+      fill={isFilled(icon) ? 'currentColor' : 'none'}
+      stroke={isFilled(icon) ? 'none' : 'currentColor'}
+      strokeWidth={isFilled(icon) ? undefined : '2'}
       aria-hidden="true"
     >
       {paths[icon]}
