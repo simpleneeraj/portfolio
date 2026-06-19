@@ -52,7 +52,7 @@ export const profile = {
   tagline: 'SaaS Founder • Software Engineer • AI Builder',
   bio: 'Building modern AI-powered products and scalable digital experiences. Passionate about SaaS, automation, and turning ideas into impactful products.',
   status: 'Open to opportunities',
-  avatar: '/avatar.jpg',
+  avatar: null,
   avatarInitials: 'N',
   copyright: 'Built with love by Neeraj',
 };
